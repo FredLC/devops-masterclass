@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/FredLC/devops-masterclass/compare/backend-v0.2.0...backend-v0.3.0) (2026-02-27)
+
+
+### Features
+
+* **backend:** added very important feature ([#19](https://github.com/FredLC/devops-masterclass/issues/19)) ([dae9049](https://github.com/FredLC/devops-masterclass/commit/dae90498dce14d2462335b0fbc054918f2a5bebf))
+
 ## [0.2.0](https://github.com/FredLC/devops-masterclass/compare/backend-v0.1.0...backend-v0.2.0) (2026-02-27)
 
 
