@@ -119,6 +119,8 @@ def health():
         {"status": status, "api_connectivity": api_status}
     ), 200 if api_status else 503
 
+    # This is a comment
+
 
 def main():
     """Entry point for the application when run as a script"""
