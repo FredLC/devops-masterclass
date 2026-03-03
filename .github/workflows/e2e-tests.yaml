@@ -1,0 +1,36 @@
+name: E2E Tests
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./kubernetes
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup k3d/k3s CLI (no cluster)
+        uses: nolar/setup-k3d-k3s@v1
+        with:
+          skip-creation: true
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run tests
+        run: uv run e2e_testing.py
