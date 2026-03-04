@@ -48,13 +48,13 @@ jobs:
         env:
           TRIVY_DEBUG: true
           TRIVY_SKIP_DB_UPDATE: true
+          TRIVY_SKIP_JAVA_DB_UPDATE: true
         with:
           image-ref: "backend:${{ github.sha }}"
           format: "table"
           exit-code: "0"
           ignore-unfixed: true
           severity: "CRITICAL,HIGH"
-          skip-setup-trivy: true
 
       - name: Install UV
         uses: astral-sh/setup-uv@v5
