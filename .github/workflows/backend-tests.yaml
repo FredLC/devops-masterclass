@@ -54,6 +54,7 @@ jobs:
           exit-code: "0"
           ignore-unfixed: true
           severity: "CRITICAL,HIGH"
+          skip-setup-trivy: true
 
       - name: Install UV
         uses: astral-sh/setup-uv@v5
