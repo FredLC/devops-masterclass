@@ -14,7 +14,7 @@ if ! command -v cz >/dev/null 2>&1 && [[ "$IN_CONTAINER" == "true" ]]; then
   python3 -m pipx ensurepath
   export PATH="$HOME/.local/bin:$PATH"
 
-  pipx install commitizen
+  pipx install commitizen --force
 
   pre-commit install
   pre-commit install --hook-type commit-msg
