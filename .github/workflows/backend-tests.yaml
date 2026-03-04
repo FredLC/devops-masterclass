@@ -44,7 +44,7 @@ jobs:
           docker inspect backend:${{ github.sha }} >/dev/null
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@0.34.2
         env:
           TRIVY_DEBUG: true
           TRIVY_SKIP_DB_UPDATE: true
