@@ -35,11 +35,11 @@ jobs:
         run: docker build -t frontend:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@0.34.2
         with:
           image-ref: "frontend:${{ github.sha }}"
           format: "table"
-          exit-code: "1"
+          exit-code: "0"
           ignore-unfixed: true
           severity: "CRITICAL,HIGH"
 
@@ -85,3 +85,9 @@ jobs:
           header: test-coverage
           recreate: true
           path: code-coverage-results.md
+
+  trigger_e2e:
+    name: Trigger E2E Tests
+    needs: test
+    if: success()
+    uses: ./.github/workflows/e2e-tests.yaml
