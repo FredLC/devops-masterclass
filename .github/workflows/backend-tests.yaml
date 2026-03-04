@@ -34,8 +34,20 @@ jobs:
       - name: Build an image from Dockerfile
         run: docker build -t backend:${{ github.sha }} .
 
+      - name: Debug workspace + docker
+        run: |
+          set -eux
+          pwd
+          ls -la
+          docker version
+          docker images | head -n 50
+          docker inspect backend:${{ github.sha }} >/dev/null
+
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.33.1
+        env:
+          TRIVY_DEBUG: true
+          TRIVY_SKIP_DB_UPDATE: true
         with:
           image-ref: "backend:${{ github.sha }}"
           format: "table"
