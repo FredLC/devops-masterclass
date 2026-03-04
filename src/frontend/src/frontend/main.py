@@ -119,7 +119,8 @@ def health():
         {"status": status, "api_connectivity": api_status}
     ), 200 if api_status else 503
 
-    # This is a comment
+    # Comment to trigger pipeline
+    # Comment to trigger pipeline
 
 
 def main():
