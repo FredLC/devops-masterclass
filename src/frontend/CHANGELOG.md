@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/FredLC/devops-masterclass/compare/frontend-v0.1.0...frontend-v0.2.0) (2026-03-07)
+
+
+### Features
+
+* implement gitops clean ([#35](https://github.com/FredLC/devops-masterclass/issues/35)) ([df9e50e](https://github.com/FredLC/devops-masterclass/commit/df9e50eaba0a0c3abe4bb9572858742322f663b1))
+
 ## 0.1.0 (2026-02-27)
 
 
