@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/FredLC/devops-masterclass/compare/backend-v0.5.0...backend-v0.6.0) (2026-03-07)
+
+
+### Features
+
+* implement gitops clean ([#35](https://github.com/FredLC/devops-masterclass/issues/35)) ([df9e50e](https://github.com/FredLC/devops-masterclass/commit/df9e50eaba0a0c3abe4bb9572858742322f663b1))
+
 ## [0.5.0](https://github.com/FredLC/devops-masterclass/compare/backend-v0.4.0...backend-v0.5.0) (2026-03-07)
 
 
