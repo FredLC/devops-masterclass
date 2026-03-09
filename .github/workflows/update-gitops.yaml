@@ -34,15 +34,15 @@ jobs:
       - name: Checkout GitOps repository
         uses: actions/checkout@v4
         with:
-          repository: FredLC/devops-study-app-gitops
+          repository: FredLC/devops-masterclass-gitops
           ref: main
-          path: devops-study-app-gitops
+          path: devops-masterclass-gitops
           ssh-key: ${{ secrets.GITOPS_DEPLOY_KEY }}
 
       - name: Update Image Tags Dev
         run: |
           # Define the target kustomization file
-          KUSTOMIZATION_FILE="./devops-study-app-gitops/apps/dev/kustomization.yaml"
+          KUSTOMIZATION_FILE="./devops-masterclass-gitops/apps/dev/kustomization.yaml"
           SCRIPT_PATH="./actions-repo/scripts/update_kustomize_tag"
 
           # Call the script with the input tag, kustomization file path, and image name
@@ -53,13 +53,13 @@ jobs:
         with:
           author_name: GitOps Bot
           author_email: mail@example.com
-          cwd: ./devops-study-app-gitops
+          cwd: ./devops-masterclass-gitops
           message: Update ${{ inputs.image }} deployment with tag "${{ inputs.tag }}"
 
       - name: Update Image Tags Prod
         run: |
           # Define the target kustomization file
-          KUSTOMIZATION_FILE="./devops-study-app-gitops/apps/prod/kustomization.yaml"
+          KUSTOMIZATION_FILE="./devops-masterclass-gitops/apps/prod/kustomization.yaml"
           SCRIPT_PATH="./actions-repo/scripts/update_kustomize_tag"
 
           # Call the script with the input tag, kustomization file path, and image name
@@ -70,7 +70,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.DEVOPS_STUDY_APP }} # Requires a PAT with repo scope for study-app-gitops
-          path: ./devops-study-app-gitops
+          path: ./devops-masterclass-gitops
           commit-message: Update dev deployments to tag ${{ inputs.tag }}
           committer: GitOps Bot <gitops-bot@github.com>
           author: GitOps Bot <gitops-bot@github.com>
