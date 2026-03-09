@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/FredLC/devops-masterclass/compare/frontend-v0.3.0...frontend-v0.3.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* **scripts:** fixed permissions on update_kustomize_tag script ([#41](https://github.com/FredLC/devops-masterclass/issues/41)) ([a2b6d2a](https://github.com/FredLC/devops-masterclass/commit/a2b6d2a6c94709762c6c1bb03a502ba62edc5f49))
+
 ## [0.3.0](https://github.com/FredLC/devops-masterclass/compare/frontend-v0.2.0...frontend-v0.3.0) (2026-03-09)
 
 
