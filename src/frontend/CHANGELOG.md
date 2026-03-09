@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/FredLC/devops-masterclass/compare/frontend-v0.2.0...frontend-v0.3.0) (2026-03-09)
+
+
+### Features
+
+* **frontend:** test gitops workflow ([#39](https://github.com/FredLC/devops-masterclass/issues/39)) ([ac750e1](https://github.com/FredLC/devops-masterclass/commit/ac750e1b7cb08dc6fe9e35d0cd02ee47c4d3f478))
+
 ## [0.2.0](https://github.com/FredLC/devops-masterclass/compare/frontend-v0.1.0...frontend-v0.2.0) (2026-03-07)
 
 
